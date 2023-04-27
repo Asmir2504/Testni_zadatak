@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery.validate.js"></script>
+
+    <title>eProdaja_test_zadatak</title>
+</head>
+
+<body>
+    <div class="wrapper-main">
+        <div class="wrapper-left">
+            <div class="title">Unesite podatke</div>
+            <form id="forma">
+                <label for="kupacImePrezime">Ime i Prezime</label>
+                <input style="width: 100%;" id="kupacImePrezime" name="kupacImePrezime" placeholder="Ime i Prezime"
+                    required>
+
+                <label for="kupacTelefon">Telefon</label>
+                <input style="width: 100%;;" id="kupacTelefon" name="kupacTelefon" placeholder="000 111 222" required>
+
+                <label for="kupacAdresa">Adresa stanovanja</label>
+                <input style="width: 100%;;" id="kupacAdresa" name="kupacAdresa" placeholder="Adresa stanovanja"
+                    required>
+
+                <label for="kucniBroj">Kućni broj</label>
+                <input style="width: 100%;;" id="kucniBroj" name="kucniBroj" placeholder="Kucni broj" required>
+
+                <label for="postanskiBroj">Poštanski broj</label>
+                <input style="width: 100%;;" id="postanskiBroj" name="postanskiBroj" placeholder="Postanski broj"
+                    required>
+
+                <label for="mjesto">Mjesto</label>
+                <input style="width: 100%;;" id="mjesto" name="mjesto" placeholder="Mjesto" required>
+
+                <label for="emailAdresa">Email adresa</label>
+                <input style="width: 100%;;" id="emailAdresa" name="emailAdresa" placeholder="Email adresa" required>
+
+
+
+
+
+
+                <label for="napomena">Napomene:</label>
+                <textarea id="napomena" name="napomena"
+                    style="max-width: 100%; height: 100px; font-size: 1.2em; background-color: white; padding: 8px;">
+                </textarea>
+                <br>
+
+                <div>
+                    <p id="proizvodOdabran">
+                    <h3 id="nazivProizvoda"></h3>
+                    <h3 style="padding-bottom: 10px;" id="cijenaProizvoda"></h3>
+                </div>
+
+
+                <button type="submit" id="naruciProizvod"  onclick="printValue()">Naruci Proizvod</button>
+            </form>
+        </div>
+
+        <div class="wrapper-right">
+            <div>
+                <h3 style="padding-bottom: 10px; font-size: 2em; color: white;">Proizvodi</h3>
+                <hr style="height: 2px; width: 7%; background-color: rgb(255, 255, 255);" />
+            </div>
+            <p style="padding-top: 10px; font-size: 1.2em; color: white;">Odaberite proizvod</p>
+
+            <div class="proizvodi">
+                <div class="proizvod-container">
+                    <img src="image/classic.png" />
+                    <div style="padding: 20px;">
+                        <p>Chipsy</p>
+                        <br>
+                        <label>1 KM</label>
+                        <br />
+                        <br />
+                        <button onclick="odabraniProizvod('Chipsy', 1)">Odaberi</button>
+                    </div>
+                </div>
+
+                <div class="proizvod-container">
+                    <img src="image/kikiriki.png" />
+                    <div style="padding: 20px;">
+                        <p>GUD - kikiriki</p>
+                        <br>
+                        <label>2 KM</label>
+                        <br />
+                        <br />
+                        <button onclick="odabraniProizvod('GUD - kikiriki', 2)">Odaberi</button>
+                    </div>
+                </div>
+
+                <div class="proizvod-container">
+                    <img src="image/popcorn.png" />
+                    <div style="padding: 20px;">
+                        <p>Popcorn</p>
+                        <br>
+                        <label>1,5 KM</label>
+                        <br />
+                        <br />
+                        <button onclick="odabraniProizvod('Popcorn', 1.5)">Odaberi</button>
+                    </div>
+                </div>
+
+                <div class="proizvod-container">
+                    <img src="image/milka.jpg" />
+                    <div style="padding: 20px;">
+                        <p>Milka</p>
+                        <br>
+                        <label>4,5 KM</label>
+                        <br />
+                        <br />
+                        <button onclick="odabraniProizvod('Milka', 4.5)">Odaberi</button>
+                    </div>
+                </div>
+
+                <div class="proizvod-container">
+                    <img src="image/red_bull.jpg" />
+                    <div style="padding: 20px;">
+                        <p>Red Bull</p>
+                        <br>
+                        <label>3 KM</label>
+                        <br />
+                        <br />
+                        <button onclick="odabraniProizvod('Red Bull', 3)">Odaberi</button>
+                    </div>
+                </div>
+
+                <div class="proizvod-container">
+                    <img src="image/coca-cola.png" />
+                    <div style="padding: 20px;">
+                        <p>Coca Cola</p>
+                        <br>
+                        <label>1,5 KM</label>
+                        <br />
+                        <br />
+                        <button onclick="odabraniProizvod('Coca Cola', 1.5)">Odaberi</button>
+                    </div>
+                </div>
+
+                <div class="proizvod-container">
+                    <img src="image/fanta.jpg" />
+                    <div style="padding: 20px;">
+                        <p>Fanta</p>
+                        <br>
+                        <label>1,5 KM</label>
+                        <br />
+                        <br />
+                        <button onclick="odabraniProizvod('Fanta', 1.5)">Odaberi</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

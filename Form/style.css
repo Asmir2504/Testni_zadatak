@@ -1,0 +1,300 @@
+*,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.wrapper-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper-left {
+    width: 30%;
+    height: 100%;
+    padding: 20px;
+    background-color: white
+}
+
+.wrapper-right {
+    width: 70%;
+    height: 100%;
+    padding-top: 20px;
+    padding-left: 45px;
+    padding-right: 45px;
+    background-color: rgba(108, 60, 131, 0.552);
+}
+
+.proizvodi {
+    width: 100%;
+    height: 90%;
+    margin-top: 10px;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.189);
+}
+
+.proizvodi::-webkit-scrollbar {
+    width: 0;
+}
+
+.proizvod-container {
+    width: 32%;
+    height: 47%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    text-align: center;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+}
+
+.proizvod-container:hover {
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    border-radius: 10px;
+    transition: all .4s;
+    background-color: rgba(128, 128, 128, 0.291);
+}
+
+.proizvod-container img {
+    width: 170px;
+    height: 220px;
+}
+
+.proizvod-container p {
+    font-size: 1.5em;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.proizvod-container label {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.proizvod-container button {
+    width: 100px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 5px;
+    color: white;
+    background-color:rgba(108, 60, 131, 0.552);
+
+    border-radius: 18px;
+    border: 2px solid  rgb(25, 0, 255);
+    border-bottom: 2px rgb(111, 0, 255);
+}
+
+.proizvod-container button:hover {
+    transition: all .4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+}
+
+
+.title {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 2em;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 3px solid rgba(108, 60, 131, 0.552);
+    padding-bottom: 15px;
+    background-color: rgba(199, 199, 199, 0.033);
+}
+
+form {
+    padding-top: 15px;
+    width: 95%;
+    height: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(199, 199, 199, 0.033);
+    overflow-y: auto;
+}
+
+form::-webkit-scrollbar {
+    width: 0;
+}
+
+form label {
+    color:purple;
+    font-size: 1.3em;
+    font-weight: 300;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+form input {
+    padding: 7px;
+    font-size: 1em;
+    box-sizing: border-box;
+    border-radius: 18px;
+    border: 2px solid  rgb(25, 0, 255);
+    border-bottom: 2px srgb(59, 22, 107);
+}
+
+form input:hover {
+    transition: all .3s;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.026);
+}
+
+#naruciProizvod {
+    width: 100%;
+    font-size: 1.3em;
+    font-weight: 300;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 18px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(0, 0, 255, 0.704);
+}
+
+#naruciProizvod:hover {
+    cursor: pointer;
+    transition: all .5s;
+    font-weight: 500;
+    border: 1px solid black;
+    background-color: rgba(0, 190, 0, 0.704);
+}
+
+#kolicina {
+    border: 1px solid black;
+}
+
+.error {
+    font-size: 1em;
+    color: red;
+}
+
+@media only screen and (max-width:600px) {
+    .wrapper-main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .wrapper-left {
+        width: 100%;
+        height: 40%;
+        padding-top: 25px;
+        padding-left: 0;
+        padding-right: 0;
+        border-top: 3px solid rgb(0, 0, 0);
+    }
+
+    .wrapper-right {
+        width: 100%;
+        height: 60%;
+        padding: 10px;
+    }
+
+    .proizvodi {
+        width: 100%;
+        height: 90%;
+    }
+
+    .proizvod-container {
+        width: 47%;
+        height: 72%;
+    }
+
+    .proizvod-container img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .proizvod-container p {
+        font-size: 1.2em;
+    }
+
+    .proizvod-container label {
+        font-size: 1em;
+    }
+
+    .proizvod-container button {
+        width: 80px;
+        height: 35px;
+        font-weight: 300;
+        font-size: 0.8em;
+    }
+
+    form {
+        width: 100%;
+        height: 85%;
+        padding-top: 5px;
+        padding-left: 25px;
+        padding-right: 25px;
+
+    }
+
+    form label {
+        font-size: 1.2em;
+    }
+
+    form input {
+        padding: 2px;
+        font-size: 1em;
+    }
+
+    form button {
+        font-size: 1em;
+        padding: 2px;
+    }
+
+    .title {
+        width: 90%;
+        font-size: 1.7em;
+        font-weight: 300;
+        padding-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .proizvod-container {
+        width: 90%;
+        height: 70%;
+        padding: 10px;
+        margin-left: 15px;
+    }
+
+    .proizvod-container img {
+        width: 120px;
+        height: 150px;
+
+    }
+}
+
+@media only screen and (max-width:1600px) {
+    .proizvod-container img {
+        width: 130px;
+        height: 160px;
+    }
+}
